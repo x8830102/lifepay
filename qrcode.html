@@ -1,0 +1,56 @@
+<head>
+<script type="text/javascript" src="http://www.webqr.com/llqrcode.js"></script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="webqr.js"></script>
+<script>
+	function drop(e) {
+	  e.stopPropagation();
+	  e.preventDefault();
+
+	  var dt = e.dataTransfer;
+	  var files = dt.files;
+
+	  handleFiles(files);
+	}
+	function read(a)
+	{
+		alert(a);
+	}	
+</script>
+
+
+<style type="text/css">
+	#qr-canvas {
+		display: none;
+	}
+	#result {
+		border: solid;
+		border-width: 1px 1px 1px 1px;
+		padding: 20px;
+		width: 70%;
+	}
+	#outdiv{
+		border:solid;
+	}
+
+</style>
+</head>
+<body>
+	<div data-role="content">
+   <center>
+    <div id="mainbody">
+      </br>
+      <div id="outdiv">
+      	<div id="qrfile">
+      		<img id="qrimage" />
+      	</div>
+      </div>
+     </br>
+     <a data-role="button" data-inline="true" id="qrimg" onclick="setimg()">Decode</a>
+     </br>
+    </div>
+  <div id="result"></div>
+  <canvas id="qr-canvas" width="400" height="300"></canvas>
+  </center>
+</div>
+</body>
