@@ -40,3 +40,5 @@ git status
 git add README.md
 git commit -m 'first commit'
 git push
+git branch gh-pages
+git checkout gh-pages
